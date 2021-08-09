@@ -1,6 +1,6 @@
 # Aprendizado da semana
 
-Nessa semana tivemos uma aula incrível sobre **terminais**, aprendemos muitos atalhos que foram bastante úteis para a realização do exercício da tarde, aqui segue uma lista de alguns atalhos que aprendemos:
+Nessa semana tivemos uma aula incrível sobre **terminais**, aprendemos muitos atalhos que foram bastante úteis para a realização do exercício da tarde, aqui segue uma lista de alguns atalhos que aprendemos:  
 
 **Comandos aula terminal**
 
@@ -24,16 +24,15 @@ Nessa semana tivemos uma aula incrível sobre **terminais**, aprendemos muitos a
 `tain -n` = permite imprimir quantas linhas quisermos ver  
 `grep` = permite buscar o conteúdo de um arquivo	 
 `grep -a` = imprime linhas após a palavra buscada  
-`grep -b` = imprime linhas anterior a palavra buscada,  
+`grep -b` = imprime linhas anterior a palavra buscada    
 
 Após isso fizemos o exercício da tarde, e foi um exercício muito divertido, era uma dinâmica em que tinhamos que procurar por meio desses comandos as pistas escondidas no meio de arquivos de texto gigantescos, essas pistas levariam ao nome de um assassino que tinhamos que encontrar.
 
-Nossa outra aula foi de **Git** e **Github**, um conteúdo muito denço, tivemos que quebrar muito a cabeça para conseguirmos entender tudo (ou quase tudo hahahahahaha). Segue a baixo uma lista com algumas coisas que aprendemos:
+Nossa outra aula foi de **Git** e **Github**, um conteúdo muito denço, tivemos que quebrar muito a cabeça para conseguirmos entender tudo (ou quase tudo hahahahahaha). Segue a baixo uma lista com algumas coisas que aprendemos:  
 
 **comandos aula Git e Github**
 
-`git clone link-do repo` = clona as informações do repo remoto para o repo local
-
+`git clone link-do repo` = clona as informações do repo remoto para o repo local  
 `git status` = indica o status do repositório  
 `git add` = envia arquivos modificados para a Staging Area (que é local)  
 `git add --all` = adiciona todos os arquivos  
