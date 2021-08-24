@@ -22,7 +22,7 @@ function retornaArrayOrdenado(array) {
 
 // EXERCÍCIO 04
 function retornaNumerosPares(array) {
-    let arrayPar = []
+    const arrayPar = []
   for (let numero of array){
       if (numero % 2 === 0){
         arrayPar.push(numero)
@@ -33,7 +33,7 @@ function retornaNumerosPares(array) {
 
 // EXERCÍCIO 05
 function retornaNumerosParesElevadosADois(array) {
-    let arrayPar = []
+    const arrayPar = []
     for (let numero of array){
         if (numero % 2 === 0){
           arrayPar.push(numero ** 2)
@@ -87,7 +87,12 @@ function retornaObjetoEntreDoisNumeros(num1, num2) {
 
 // EXERCÍCIO 08
 function retornaNPrimeirosPares(n) {
-   
+   const numerosPar = [0,2,4,6,8,10,12,14,16,18,20,22,24,26,28,30]
+   const arrayFinal = []
+   for (let i = 0; i < n; i++){
+      arrayFinal.push(numerosPar[i])
+   }
+   return arrayFinal
 }
 
 // EXERCÍCIO 09
