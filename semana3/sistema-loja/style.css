@@ -1,0 +1,43 @@
+.lista{
+display: flex;
+justify-content: center
+}
+.tabela{
+    display: flex;
+    justify-content: center;
+    margin: 50px;
+    margin-left: 50px;
+    }
+.centro {
+    text-align: center;
+    align-items: center;
+    margin: 2vh;
+}
+.foto{
+    max-width:17px;
+}
+span{
+    margin: 0px 20px 0px 0px;
+    
+}
+.meioSite{
+     padding-bottom:4vh 
+}
+.video{
+    display: block;
+    margin: auto;
+}
+button{
+  
+        font-family: Arial;
+        font-size: 14px;
+        font-weight: 550;
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+        background-color: rgb(172, 180, 255);
+}
+.fotoEstoque{
+    max-width: 125px;
+    position: relative;
+}
