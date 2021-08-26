@@ -90,6 +90,13 @@ div img {
     top: 100px;;
     
 }
+#texto-inicio{
+    display: block;
+    max-width: 180px;
+    margin: 0 auto;
+    
+  
+}
 
 
 /**
