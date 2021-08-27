@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+#minha-foto{
+    max-width: 300px;
+    border-radius: 50%;
+}
+.header{
+    background-color: rgb(170, 170, 170);
+    padding: 20px;
+    text-align: center;
+
+}
+.button{
+    margin: 0 20px;
+    
+}
+button{
+    padding: 10px 25px;
+
+}
+.section{
+    text-align: center;
+    margin: 50px;
+}
+.footer{
+    background-color: rgb(170, 170, 170);
+    text-align: center;
+    position: fixed;
+    right: 0;
+    left: 0;
+    bottom: 0;
+}
+.icone{
+    background-color: rgb(170, 170, 170);
+    max-width: 30px;
+}
+.foto-site-calculadora{
+    max-width: 500px;
+}
