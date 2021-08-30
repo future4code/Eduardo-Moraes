@@ -5,12 +5,14 @@
 #minha-foto{
     max-width: 300px;
     border-radius: 50%;
+    /* margin: 0px 100px; */
 }
 .header{
     background-color: rgb(170, 170, 170);
     padding: 20px;
-    text-align: center;
-
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .button{
     margin: 0 20px;
@@ -18,7 +20,20 @@
 }
 button{
     padding: 10px 25px;
-
+    border-radius: 6px;
+    color: black;
+    background-color: rgb(193, 243, 255);
+    border: none;
+    
+}
+button:hover{
+    background-color: rgb(161, 227, 243);
+    box-shadow: 0 2px 0 rgb(112, 181, 199);
+}
+button:active{
+    position: relative;
+    top: 2px;
+    box-shadow: none;
 }
 .section{
     text-align: center;
@@ -35,7 +50,24 @@ button{
 .icone{
     background-color: rgb(170, 170, 170);
     max-width: 30px;
+    margin: 8px 15px 2px 15px;
 }
-.foto-site-calculadora{
-    max-width: 500px;
+.foto-site-projetos{
+    max-width: 250px;
+    border-radius: 3px;
+    margin: 10px 60px;
+}
+table{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0px 200px;
+}
+.frase-projeto{
+    max-width: 250px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    padding: 15px 0px;
 }
