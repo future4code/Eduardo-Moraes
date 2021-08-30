@@ -1,0 +1,24 @@
+* {
+    padding:0 ;
+    margin: 0;
+}
+header{
+    background-color: mediumvioletred;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.icone{
+    max-width: 20px;
+}
+button{
+    margin-right: 20px;
+}
+.titulo{
+    display: flex;
+    align-items: center;
+    margin: 5px 15px;
+}
+.confeiteria{
+    margin-left: 20px;
+}
