@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+header{
+    padding: 10px;
+    background-color: rgb(245, 227, 67);
+    display: flex;
+    align-items: center;
+    justify-content: space-between
+    
+}
+.icones{
+    max-width: 30px;
+    padding: 0 10px;
+}
+.icone-e-texto{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10px;
+}
+.input-e-icone{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10px;
+}
+.video{
+    max-width: 200px;
+}
+.play-de-video{
+    display: grid;
+}
+footer{
+    height: 50px; 
+    background-color: rgb(245, 227, 67);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
