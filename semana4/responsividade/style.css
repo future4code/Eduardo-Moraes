@@ -57,8 +57,6 @@ footer{
     position: fixed;
     bottom: 0;
     width: 100vw;
-
-
 } 
 
 p{
@@ -106,7 +104,48 @@ p{
 .joinha{
     display: flex;
     justify-content:center;
-
-
-
+}
+@media screen and (max-device-width : 830px){
+    section{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .section2{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 30px;
+        margin: 30px;
+        justify-content: center;
+    }
+    footer{
+        height: 50px; 
+        background-color: rgb(245, 227, 67);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        bottom: 0;
+        width: 100vw;
+    } 
+}
+@media screen and (max-device-width : 530px){
+    section{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .section2{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 30px;
+        margin: 30px;
+        justify-content: center;
+    }
+    header{
+        padding: 10px;
+        background-color: rgb(245, 227, 67);
+        display: grid;
+        align-items: center;
+        /* justify-content: space-between */
+        grid-template-columns: repeat(1, 1fr);
+    }
 }
