@@ -3,6 +3,16 @@ import './App.css';
 import CardGrande from './components/CardGrande/CardGrande';
 import CardPequeno from './components/CardPequeno/CardPequeno';
 import ImagemButton from './components/ImagemButton/ImagemButton';
+import styled from 'styled-components';
+
+const CardGrandeContainer = styled.div`
+    display: flex;
+    align-items: center;
+    border: 1px solid black;
+    padding: 20px 10px;
+    margin-bottom: 10px;
+    height: 200px;
+`
 
 function App() {
   return (
