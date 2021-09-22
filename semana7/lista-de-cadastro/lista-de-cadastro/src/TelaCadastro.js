@@ -35,6 +35,7 @@ export default class TelaCadastro extends React.Component{
             }
         }).then((res)=>{
             window.alert("Você foi cadastrado com sucesso")
+            this.setState({nome: "", email: ""})
         })
         .catch((err)=>{
             window.alert("erro, não foi possivel fazer o cadastro")
