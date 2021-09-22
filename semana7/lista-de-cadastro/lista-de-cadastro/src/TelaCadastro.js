@@ -2,6 +2,15 @@ import axios from "axios";
 import React from "react";
 import styled from "styled-components";
 
+const Butao = styled.button`
+display: flex;
+justify-content: center;
+`
+const Div = styled.div`
+display: flex;
+flex-direction: column;
+align-items: center;
+`
 const DivDoCadastro = styled.div`
 width: 250px;
 height: 200px;
@@ -44,8 +53,8 @@ export default class TelaCadastro extends React.Component{
     
     render(){
         return(
-            <div>
-                <button onClick={()=>{this.props.irParaLista()}}> ir para lista</button>
+            <Div>
+                <Butao onClick={()=>{this.props.irParaLista()}}> ir para lista</Butao>
             <DivDoCadastro>
             <label>Nome:</label>
             <input 
@@ -61,7 +70,7 @@ export default class TelaCadastro extends React.Component{
              />
             <button onClick={this.enviarCadastro} >Enviar</button>
           </DivDoCadastro>
-          </div>
+          </Div>
         )
     }
 }
