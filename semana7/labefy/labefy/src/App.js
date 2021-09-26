@@ -1,38 +1,35 @@
 import React from "react";
 import styled from "styled-components";
-import axios from "axios"
+import AdicionarPlaylist from "./components/AdicionaPlaylist";
+import MostraPlaylist from "./components/MostraPlaylist";
 
 
 class App extends React.Component {
   state={
-    name: "" 
+    estadoDaTela: "AdicionarPlaylist" 
   }
-  atualizaEstado = (e)=>{
-    this.setState({name: e.target.value})
+  irParaMostraPlaylist = () =>{
+    this.setState({estadoDaTela: "MostraPlaylist"})
   }
-  addNovaPlayList = ()=>{
-    const url = "https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists"
-    const body = {
-      name: this.state.name
+  escolheTela = () => {
+    switch (this.state.estadoDaTela){
+      case "AdicionarPlaylist":
+        return <AdicionarPlaylist
+        irParaMostraPlaylist = {this.irParaMostraPlaylist}
+        />
+      case "MostraPlaylist":
+        return <MostraPlaylist/>
+      default:
+        <div>[ERRO] página não encontrada!</div>  
     }
-    axios.post(url, body, {
-      headers:{
-        Authorization: "Eduardo-Moraes-Maryam"
-      }
-    }).then((res)=>{
-      console.log("cadastrado")
-    }).catch((err)=>{
-      console.log(err)
-    })
   }
 
   render() {
     
     return (
       <div>
-        <p>escreva o nome de uma playlist</p>
-        <input value={this.state.name} onChange={this.atualizaEstado}></input>
-        <button onClick={this.addNovaPlayList}>enviar</button>
+        {this.escolheTela()}
+        <button onClick={()=>{this.irParaMostraPlaylist()}}>mudar de pagina</button>
       </div>
     );
   }
