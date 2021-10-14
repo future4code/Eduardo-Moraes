@@ -1,11 +1,21 @@
+import React from "react";
+import styled from "styled-components";
+import Header from "./Components/Header";
+import GlobalStyle from "./GlobalStyles";
+import PaginaHome from "./Pages/PaginaHome";
 
+const Div = styled.div`
 
-function App() {
+`
+
+const App = () => {
   return (
-    <div>
-      oie
     
-    </div>
+      <div>
+        <GlobalStyle />
+       <PaginaHome />
+      </div>
+    
   );
 }
 
