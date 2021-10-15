@@ -5,16 +5,16 @@ import GlobalStyle from "./GlobalStyles";
 import PaginaHome from "./Pages/PaginaHome";
 
 const Div = styled.div`
-
+height: 80vh;
 `
 
 const App = () => {
   return (
     
-      <div>
+      <Div>
         <GlobalStyle />
        <PaginaHome />
-      </div>
+      </Div>
     
   );
 }
