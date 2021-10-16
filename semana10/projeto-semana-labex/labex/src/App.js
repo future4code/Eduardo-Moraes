@@ -1,20 +1,16 @@
 import React from "react";
 import styled from "styled-components";
-import Header from "./Components/Header";
 import GlobalStyle from "./GlobalStyles";
 import PaginaHome from "./Pages/PaginaHome";
-
-const Div = styled.div`
-height: 80vh;
-`
+import Routes from "./routes/Routes";
 
 const App = () => {
   return (
     
-      <Div>
+      <div>
         <GlobalStyle />
-       <PaginaHome />
-      </Div>
+       <Routes />
+      </div>
     
   );
 }

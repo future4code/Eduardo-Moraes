@@ -7,6 +7,8 @@ padding: 15px;
 width: 500px;
 `
 const CardViagens = () => {
-    const []
+    return(
+        <div>oi</div>
+    )
 }
 export default CardViagens

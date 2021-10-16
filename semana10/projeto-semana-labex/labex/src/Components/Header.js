@@ -1,5 +1,7 @@
 import React from "react";
+import { useHistory } from "react-router";
 import styled from "styled-components";
+import { irParaLogin, irParaVerViagens } from "../routes/mudaPagina";
 
 
 const ConteinerHeader = styled.header`
@@ -36,6 +38,8 @@ div{
 `
 
 const Header = () => {
+    const history = useHistory()
+
     return (
 
         <ConteinerHeader>
@@ -43,8 +47,8 @@ const Header = () => {
             <h1>LabeX</h1>
             </div>
             <div>
-                <button>Ver Viagens</button>
-                <button>Área Admin</button>
+                <button onClick={()=> irParaVerViagens(history)}>Ver Viagens</button>
+                <button onClick={()=> irParaLogin(history)}>Área Admin</button>
             </div>
         </ConteinerHeader>
 

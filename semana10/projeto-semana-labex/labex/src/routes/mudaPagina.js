@@ -1,26 +1,26 @@
-export const irParaHome = (historico)=>{
-    historico.push("/")
+export const irParaHome = (history)=>{
+    history.push("/")
 }
-export const goToListTripsPage = (history) => {
-    history.push("/trips/list")
+ export const irParaVerViagens = (history) => {
+     history.push("/viagem/lista")
+ }
+
+export const irParaInscricao = (history) => {
+    history.push("/viagem/inscricao")
 }
 
-export const goToApplicationFormPage = (history) => {
-    history.push("/trips/application")
-}
-
-export const goToLoginPage = (history) => {
+export const irParaLogin = (history) => {
     history.push("/login")
 }
 
-export const goToAdminHomePage = (history) => {
-    history.push("/admin/trips/list")
+export const irParaAdministrador = (history) => {
+    history.push("/admin/viagem/lista")
 }
 
-export const goToCreateTripPage = (history) => {
-    history.push("/admin/trips/create")
+export const irParaCriarViagem = (history) => {
+    history.push("/admin/viagem/criar")
 }
 
-export const goToTripDetailsPage = (history, id) => {
-    history.push(`/admin/trips/${id}`)
+export const irParaDetalhes = (history, id) => {
+    history.push(`/admin/viagem/${id}`)
 }
