@@ -5,7 +5,7 @@ const useRequestData = (endpoint, estadoInicial) =>{
     const [data, setData] = useState(estadoInicial)
 
     const pegaData = () => {
-        axios.get(`https://us-central1-labenu-apis.cloudfunctions.net/labeX/Eduardo-Moraes-Maryam ${endpoint}`,{
+        axios.get(`https://us-central1-labenu-apis.cloudfunctions.net/labeX/Eduardo-Moraes-Maryam${endpoint}`,{
             headers:{
                 auth: localStorage.getItem("token")
             }

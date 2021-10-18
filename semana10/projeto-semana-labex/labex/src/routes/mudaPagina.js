@@ -1,3 +1,5 @@
+import PaginaInscricao from "../Pages/PaginaInscricao"
+
 export const irParaHome = (history)=>{
     history.push("/")
 }
@@ -5,8 +7,10 @@ export const irParaHome = (history)=>{
      history.push("/viagem/lista")
  }
 
-export const irParaInscricao = (history) => {
-    history.push("/viagem/inscricao")
+export const irParaInscricao = (history, id) => {
+    
+    history.push(`/viagem/inscricao/${id}`)
+    
 }
 
 export const irParaLogin = (history) => {

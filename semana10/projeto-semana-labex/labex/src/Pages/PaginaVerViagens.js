@@ -11,14 +11,28 @@ display: flex;
 flex-direction: column;
 justify-content: center;
 align-items: center;
-width: 500px;
+button{
+        font-size: medium;
+        margin-left: 40px; 
+        background-color: #959EAD;
+        border: none;
+        width: 120px;
+        height: 40px;
+        color: white;
+        border-radius: 6px;
+        :hover{
+            background-color: #BCC8DD;
+            cursor: pointer;
+        }
+    }
 `
 const PaginaVerViagens = () =>{
     const [dadosDaViagem] = useRequestData("/trips",{})
     const history = useHistory()
     
     const listaDeViagens = dadosDaViagem.trips && dadosDaViagem.trips.map((item)=>{
-        return <CardViagens key={item.id} item = {item} />
+        return <CardViagens key={item.id} item = {item}
+        id = {item.id} />
     })
 
     return(
