@@ -1,0 +1,1 @@
+export const corPrincial = "1D8F41"
