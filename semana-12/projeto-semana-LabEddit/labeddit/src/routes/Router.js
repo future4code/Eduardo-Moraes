@@ -1,5 +1,6 @@
 import React from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
+import Header from "../components/Header";
 import CadastroPage from "../pages/CadastroPage/CadastroPage";
 import ErrorPage from "../pages/ErrorPage/ErrorPage";
 import FeedPage from "../pages/FeedPage/FeedPage";
@@ -9,6 +10,7 @@ import PostPage from "../pages/PostPage/PostPage";
 const Router = () => {
     return(
         <BrowserRouter>
+            <Header />
             <Switch>
                 <Route exact path ="/cadastro">
                     <CadastroPage />

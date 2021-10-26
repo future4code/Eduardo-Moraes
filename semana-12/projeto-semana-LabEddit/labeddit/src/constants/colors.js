@@ -1,1 +1,2 @@
-export const corPrincial = "1D8F41"
+export const corPrincial = "#83DB58"
+export const corNeutra = "#ABD6B8"
