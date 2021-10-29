@@ -6,7 +6,12 @@ import useForm from "../../hooks/useForm";
 import { useHistory } from "react-router";
 import axios from "axios";
 import { BASE_URL } from "../../constants/urls";
-const CadastroPage = () => {
+import useUnprotectedPage from "../../hooks/useUnprotectedPage";
+import { irParaFeed } from "../../routes/coordinator";
+
+const CadastroPage = ({setTextoDoBotao}) => {
+    useUnprotectedPage()
+
     const [form, onChange, clear]= useForm({email:"", password:"", username:""})
     const onSubmitForm = (event) => {
         event.preventDefault()
@@ -17,8 +22,11 @@ const CadastroPage = () => {
         .then((res)=>{
             localStorage.setItem("token", res.data.token)
             clear()
+            irParaFeed(history) 
+            setTextoDoBotao("logout")
         }).then((err)=>{
             console.log(err)
+           
         })
     }
     const history = useHistory()

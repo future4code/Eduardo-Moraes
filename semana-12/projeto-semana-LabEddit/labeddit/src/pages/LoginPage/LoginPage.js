@@ -4,11 +4,14 @@ import redeSocial2 from "../../assets/redeSocial2.jpg"
 import { Button, TextField } from "@material-ui/core";
 import useForm from "../../hooks/useForm";
 import { useHistory } from "react-router";
-import { irParaCadastro } from "../../routes/coordinator";
+import { irParaCadastro, irParaFeed } from "../../routes/coordinator";
 import axios from "axios";
 import { BASE_URL } from "../../constants/urls"
-import { SwitchVideoRounded } from "@material-ui/icons";
-const LoginPage = () => {
+import useUnprotectedPage from "../../hooks/useUnprotectedPage"; 
+
+const LoginPage = ({setTextoDoBotao}) => {
+    useUnprotectedPage()
+
     const [form, onChange, clear] = useForm({email:"", password: ""})
     const onSubmitForm = (event) => {
        event.preventDefault()
@@ -20,8 +23,10 @@ const LoginPage = () => {
         .then((res)=>{
             localStorage.setItem("token", res.data.token)
             clear()
+            irParaFeed(history)
+            setTextoDoBotao("logout")
         }).catch((err)=>{
-            console.log(err)
+            window.alert(err)
         })
     }
     const history = useHistory()

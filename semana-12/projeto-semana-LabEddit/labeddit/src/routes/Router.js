@@ -1,25 +1,22 @@
 import React from "react";
-import { BrowserRouter, Switch, Route } from "react-router-dom";
-import Header from "../components/Header";
+import { Switch, Route } from "react-router-dom";
 import CadastroPage from "../pages/CadastroPage/CadastroPage";
 import ErrorPage from "../pages/ErrorPage/ErrorPage";
 import FeedPage from "../pages/FeedPage/FeedPage";
 import LoginPage from "../pages/LoginPage/LoginPage";
 import PostPage from "../pages/PostPage/PostPage";
 
-const Router = () => {
+const Router = ({setTextoDoBotao}) => {
     return(
-        <BrowserRouter>
-            <Header />
             <Switch>
                 <Route exact path ="/cadastro">
-                    <CadastroPage />
+                    <CadastroPage setTextoDoBotao={setTextoDoBotao} />
                 </Route>
                 <Route exact path="/">
                     <FeedPage />
                 </Route>
                 <Route exact path="/login">
-                    <LoginPage />
+                    <LoginPage setTextoDoBotao={setTextoDoBotao} />
                 </Route>
                 <Route exact path ="/post/:id">
                     <PostPage />
@@ -28,7 +25,6 @@ const Router = () => {
                     <ErrorPage />
                 </Route>
             </Switch>
-        </BrowserRouter>
     )
 }
 export default Router
