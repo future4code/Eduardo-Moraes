@@ -5,10 +5,24 @@ import { Button, TextField } from "@material-ui/core";
 import useForm from "../../hooks/useForm";
 import { useHistory } from "react-router";
 import { irParaCadastro } from "../../routes/coordinator";
+import axios from "axios";
+import { BASE_URL } from "../../constants/urls"
+import { SwitchVideoRounded } from "@material-ui/icons";
 const LoginPage = () => {
     const [form, onChange, clear] = useForm({email:"", password: ""})
     const onSubmitForm = (event) => {
        event.preventDefault()
+       console.log(form)
+       login()
+    }
+    const login = () => {
+        axios.post(`${BASE_URL}/users/login`, form)
+        .then((res)=>{
+            localStorage.setItem("token", res.data.token)
+            clear()
+        }).catch((err)=>{
+            console.log(err)
+        })
     }
     const history = useHistory()
     return(
