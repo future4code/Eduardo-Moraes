@@ -2,7 +2,7 @@ import React from 'react';
 import AppBar from '@material-ui/core/AppBar';
 import Button from '@material-ui/core/Button';
 import { StyledToolbar } from './styled';
-import { irParaFeed, irParaLogin } from '../routes/coordinator'
+import { irParaFeed, irParaLogin } from '../../routes/coordinator'
 import { useHistory } from 'react-router';
 
 const Header = ({textoDoBotao, setTextoDoBotao}) => {
