@@ -1,0 +1,88 @@
+import express, { Request, Response } from 'express'
+import cors from 'cors'
+
+enum UserType{
+  ADMIN = "ADMIN",
+  NORMAL = "NORMAL"
+}
+
+type User = {
+  id: number,
+  name: string,
+  email: string,
+  type: UserType,
+  age: number
+}
+
+// Mock simulando um array de usuários no Banco de Dados
+let users: User[] = [
+  {
+      id: 1,
+      name: "Alice",
+      email: "alice@email.com",
+      type: UserType.ADMIN,
+      age: 12
+  },
+  {
+      id: 2,
+      name: "Bob",
+      email: "bob@email.com",
+      type: UserType.NORMAL,
+      age: 36
+  },
+  {
+      id: 3,
+      name: "Coragem",
+      email: "coragem@email.com",
+      type: UserType.NORMAL,
+      age: 21
+  },
+  {
+      id: 4,
+      name: "Dory",
+      email: "dory@email.com",
+      type: UserType.NORMAL,
+      age: 17
+  },
+  {
+      id: 5,
+      name: "Elsa",
+      email: "elsa@email.com",
+      type: UserType.ADMIN,
+      age: 17
+  },
+  {
+      id: 6,
+      name: "Fred",
+      email: "fred@email.com",
+      type: UserType.ADMIN,
+      age: 60
+  }
+]
+
+const app = express()
+app.use(express.json())
+app.use(cors())
+
+app.get("/type", (req:Request, res:Response)=>{
+  let result:User[]= users
+  if (req.query.type){
+    result = result.filter((user)=>{
+      return user.type.includes(req.query.type as UserType)
+    })
+  }
+  if (result){
+    res.status(200).send(result)
+  }else{
+    res.status(400).send({message: "type incorreto"})
+  }
+})
+
+// Para testar se o servidor está tratando os endpoints corretamente
+app.get("/ping", (req: Request, res: Response) => {
+  res.status(200).send("pong!")
+})
+
+app.listen(3003, () => {
+  console.log('Server is running at port 3003')
+})
