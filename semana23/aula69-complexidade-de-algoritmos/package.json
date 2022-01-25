@@ -1,0 +1,14 @@
+{
+  "name": "aula69-complexidade-de-algoritmos",
+  "version": "1.0.0",
+  "description": "",
+  "main": "testes.js",
+  "scripts": {
+    "start": "node testes.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+    
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
