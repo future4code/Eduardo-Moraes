@@ -1,4 +1,3 @@
-
 //Questão 1
 
 //a) -o construtor serve para atibuirmos valores a classe
